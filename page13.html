@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>cry me a river</title>
+  <style>
+    body {
+      font-family: Georgia, serif;
+      margin: 0;
+      padding: 0;
+      background-color: #eef2f3;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.9);
+      margin: 0;
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    .poem {
+      padding: 100px 20px 60px;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8em;
+    }
+
+    .stanza {
+      margin-bottom: 20px;
+    }
+
+    .line {
+      display: block;
+      position: relative;
+    }
+
+    .float-words span {
+      display: inline-block;
+      animation: floatWords 6s ease-in-out infinite alternate;
+    }
+
+    .float-words span:nth-child(2n) {
+      animation-delay: 1s;
+    }
+
+    .float-words span:nth-child(3n) {
+      animation-delay: 2s;
+    }
+
+    .random-fade {
+      opacity: 1;
+      animation: randomFade 8s ease-in-out infinite;
+    }
+
+    @keyframes floatWords {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(0, -10px); }
+    }
+
+    @keyframes randomFade {
+      0%, 100% {
+        opacity: 1;
+      }
+      40%, 60% {
+        opacity: 0;
+      }
+    }
+
+    .random-fade:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .random-fade:nth-child(2) {
+      animation-delay: 2s;
+    }
+
+    .random-fade:nth-child(3) {
+      animation-delay: 4s;
+    }
+
+    .random-fade:nth-child(4) {
+      animation-delay: 1s;
+    }
+
+    .random-fade:nth-child(5) {
+      animation-delay: 3s;
+    }
+
+    .persist-self {
+      animation: none !important;
+      opacity: 1 !important;
+      color: black;
+    }
+
+    .back-link {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: #ffffff;
+      padding: 10px 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      text-decoration: none;
+      color: #333;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+      transition: background 0.3s;
+      z-index: 20;
+    }
+
+    .back-link:hover {
+      background: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <h1>cry me a river</h1>
+  <div class="poem">
+    <div class="stanza">
+      <p class="line float-words"><span>cry</span> <span>me</span> <span>a</span> <span>river</span> <span>so</span> <span>i</span> <span>can</span> <span>dip</span> <span>my</span> <span>toes</span> <span>in.</span> <span>or</span> <span>a</span> <span>lake.</span> <span>i</span> <span>have</span> <span>no</span> <span>preference.</span></p>
+    </div>
+    <div class="stanza">
+      <p class="line random-fade">you don’t have to tell me i’m selfish, i know that already.</p>
+      <p class="line random-fade">self-ish. self-removed. self apart, self not me.</p>
+    </div>
+    <div class="stanza">
+      <p class="line random-fade">the tide of your water will rise and cover my calves. eventually.</p>
+      <p class="line random-fade">the change of a few inches in a length of time. only an outsider could return and see the difference.</p>
+    </div>
+    <div class="stanza">
+      <p class="line random-fade">we tell ourselves the tide changes because of the pull of the moon.</p>
+      <p class="line random-fade">is the tide grateful for guidance? or reluctant to the tug?</p>
+    </div>
+    <div class="stanza">
+      <p class="line random-fade">i’m standing in shallow water now and my bikini line is forgotten among the bubbles in the surface.</p>
+      <p class="line float-words"><span>pebbles</span> <span>intertwine</span> <span>with</span> <span>my</span> <span>toes</span> <span>as</span> <span>i</span> <span>walk</span> <span>in</span> <span>deeper</span></p>
+    </div>
+    <div class="stanza">
+      <p>i can sense stillness if i focus hard enough. only if i focus hard enough.</p>
+    </div>
+    <div class="stanza">
+      <p class="line random-fade">my shoulders disappear and i get used to the cold.</p>
+      <p class="line random-fade">my muscles shudder in the space of a half-second.</p>
+    </div>
+    <div class="stanza">
+      <p class="line random-fade">do you like the sun, offering radiance? or is its heat too brash and too much?</p>
+      <p class="line random-fade">do you prefer the rain instead, offering renewal? or is it too unpredictable, uncontrollable?</p>
+      <p class="line random-fade">you have to pick one.</p>
+    </div>
+    <div class="stanza">
+      <p class="line random-fade">my head is all that exists now. survives, now.</p>
+      <p class="line random-fade">i use it to detach from the rest of me.</p>
+      <p class="line random-fade">self-ish.</p>
+    </div>
+    <div class="stanza">
+      <p class="line float-words"><span>my</span><span>right</span> <span>hand</span> <span>will</span> <span>reach</span> <span>towards</span> <span>the</span> <span>sky</span> <span>as</span> <span>i</span> <span>feel</span> <span>the</span> <span>top</span> <span>of</span> <span>myself</span> <span>dip</span> <span>below</span> <span>this</span> <span>body</span></p>
+    </div>
+  </div>
+
+  <a class="back-link" href="index.html">Back to Homepage</a>
+</body>
+</html>
+
+<!-- 
+cry me a river
+-->

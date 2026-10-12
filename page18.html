@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>twenty six</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #f8f8f8;
+      font-family: Georgia, serif;
+      overflow: hidden;
+    }
+
+    h1 {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #fff;
+      margin: 0;
+      padding: 1em 0;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.8em;
+      border-bottom: 2px solid #ccc;
+      z-index: 10;
+    }
+
+    .poem-container {
+      margin-top: 100px;
+      position: relative;
+      height: calc(100vh - 100px);
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .line {
+      position: absolute;
+      padding: 0.5em 1em;
+      background: #fffbe6;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+      cursor: grab;
+      transition: transform 0.3s ease;
+      user-select: none;
+    }
+
+    .line:hover {
+      transform: scale(1.05);
+    }
+
+    .line:active {
+      cursor: grabbing;
+    }
+
+    .last-line:hover {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .back-link {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: #ffffff;
+      padding: 10px 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      text-decoration: none;
+      color: #333;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+      transition: background 0.3s;
+      z-index: 20;
+    }
+
+    .back-link:hover {
+      background: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <h1>twenty six</h1>
+
+  <div class="poem-container" id="poem"></div>
+
+  <a class="back-link" href="index.html">Back to Homepage</a>
+
+  <script>
+    const lines = [
+      "maybe it was last weekend when i turned my head to avoid your gaze in selfish desire",
+      "nighttime shields mystery, self-assurance prevents worthwhile growth",
+      "i desperately crave soft skin against mine in protest of the bite of white-capped mountainous winters",
+      "i won’t drop to my knees but whispers of senseless secrecy climb limbs and hold doors",
+      "i feel the ache of your outstretched fingers in the careful rhythm of my batted eyelashes",
+      "in my dreams i seek solace with Blame and comfort myself in the advice of Avoidance",
+      "i write and pages stack like a pedestal"
+    ];
+
+    const container = document.getElementById('poem');
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    lines.forEach((text, i) => {
+      const div = document.createElement('div');
+      div.classList.add('line');
+      if (i === lines.length - 1) div.classList.add('last-line');
+      div.textContent = text;
+
+      const x = Math.random() * (width - 350);
+      const y = Math.random() * (height - 200) + 50;
+      div.style.left = `${x}px`;
+      div.style.top = `${y}px`;
+
+      let isDragging = false;
+      let offsetX, offsetY;
+
+      div.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        offsetX = e.clientX - div.offsetLeft;
+        offsetY = e.clientY - div.offsetTop;
+        div.style.zIndex = 1000;
+      });
+
+      document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+          div.style.left = `${e.clientX - offsetX}px`;
+          div.style.top = `${e.clientY - offsetY}px`;
+        }
+      });
+
+      document.addEventListener('mouseup', () => {
+        if (isDragging) {
+          isDragging = false;
+          div.style.zIndex = '';
+        }
+      });
+
+      container.appendChild(div);
+    });
+  </script>
+</body>
+</html>
+
+<!-- 
+twenty six
+-->

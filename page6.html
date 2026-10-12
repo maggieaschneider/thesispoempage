@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>question mark</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fdfdfd;
+      font-family: Georgia, serif;
+      overflow-x: hidden;
+      color: #222;
+    }
+
+    h1 {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #fff;
+      margin: 0;
+      padding: 1em 0;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.8em;
+      border-bottom: 2px solid #ccc;
+      z-index: 10;
+    }
+
+    .poem-container {
+      margin-top: 120px;
+      padding: 2em;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.4em;
+      transition: font-size 0.3s ease, opacity 0.3s ease;
+    }
+
+    .back-link {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: #ffffff;
+      padding: 10px 15px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      text-decoration: none;
+      color: #333;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+      transition: background 0.3s;
+      z-index: 20;
+    }
+
+    .back-link:hover {
+      background: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <h1>question mark</h1>
+
+  <div class="poem-container" id="poem">
+    <p>the curve of my spine bent against your ribs like a question mark like we are one against one so close i can feel your heartbeat and your breaths and your hands along my body. i close my eyes tight like if i do so it will freeze time instead of my hands or your heart or the warm breeze of endless summer. cycles in the seasons and in the words you throw but refuse to catch and yet again my arm is more sore than yours. the sweetness of this moment is addictive like a drug and i only hear this call echoing again and again and again…</p>
+  </div>
+
+  <a class="back-link" href="index.html">Back to Homepage</a>
+
+  <script>
+    let poem = document.getElementById('poem');
+    let fontSize = 1.7; 
+    let opacity = 1.0;
+    poem.style.fontSize = fontSize + 'em';
+    poem.style.opacity = opacity;
+
+    poem.addEventListener('click', () => {
+      if (fontSize > 0.2) {
+        fontSize -= 0.3;
+        opacity -= 0.1;
+        poem.style.fontSize = fontSize + 'em';
+        poem.style.opacity = opacity;
+      } else {
+        poem.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
+
+<!-- 
+question mark
+-->

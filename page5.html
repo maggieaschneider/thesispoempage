@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>elaine</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      font-family: Georgia, serif;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    h1 {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #000;
+      margin: 0;
+      padding: 1em 0;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.8em;
+      border-bottom: 2px solid #444;
+      z-index: 10;
+      color: white;
+    }
+
+    .poem-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      margin-top: 100px;
+    }
+
+    .star-line {
+      position: absolute;
+      white-space: nowrap;
+      font-size: 1.2em;
+      letter-spacing: 0.2em;
+      animation: twinkle 3s infinite ease-in-out;
+      opacity: 0.5;
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 1; }
+    }
+
+    .star-line:nth-child(1) {
+      animation-duration: 2s;
+    }
+    .star-line:nth-child(2) {
+      animation-duration: 3s;
+    }
+    .star-line:nth-child(3) {
+      animation-duration: 1.5s;
+    }
+    .star-line:nth-child(4) {
+      animation-duration: 4s;
+    }
+    .star-line:nth-child(5) {
+      animation-duration: 2.5s;
+    }
+    .star-line:nth-child(6) {
+      animation-duration: 3s;
+    }
+    .star-line:nth-child(7) {
+      animation-duration: 1.8s;
+    }
+    .star-line:nth-child(8) {
+      animation-duration: 3.5s;
+    }
+    .star-line:nth-child(9) {
+      animation-duration: 2s;
+    }
+
+    .back-link {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: #222;
+      padding: 10px 15px;
+      border-radius: 10px;
+      border: 1px solid #555;
+      text-decoration: none;
+      color: #fff;
+      box-shadow: 1px 1px 5px rgba(255,255,255,0.1);
+      transition: background 0.3s;
+      z-index: 20;
+    }
+
+    .back-link:hover {
+      background: #444;
+    }
+  </style>
+</head>
+<body>
+  <h1>elaine</h1>
+
+  <div class="poem-container">
+    <div class="star-line">twirl my hair</div>
+    <div class="star-line">point my toes</div>
+    <div class="star-line">run away.</div>
+
+    <div class="star-line">bright eyes</div>
+    <div class="star-line">deep sighs</div>
+    <div class="star-line">twinkling stars.</div>
+
+    <div class="star-line">wandering hand</div>
+    <div class="star-line">wandering mind</div>
+    <div class="star-line">wan ting.</div>
+  </div>
+
+  <a class="back-link" href="index.html">Back to Homepage</a>
+
+  <script>
+   
+    const lines = document.querySelectorAll('.star-line');
+    lines.forEach(line => {
+      const randomTop = Math.random() * 80;  
+      const randomLeft = Math.random() * 90; 
+      line.style.top = `${randomTop}%`;
+      line.style.left = `${randomLeft}%`;
+    });
+  </script>
+</body>
+</html>
+
+<!-- 
+elaine
+-->
